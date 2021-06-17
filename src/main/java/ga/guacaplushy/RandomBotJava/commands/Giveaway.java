@@ -58,7 +58,7 @@ public class Giveaway {
                 Collections.shuffle(reactors);
                 EmbedBuilder embed = new EmbedBuilder();
                 embed.setTitle(reactors.stream().findAny().map(Object::toString).orElse("Nobody") + " won the " + gprize + " giveaway!");
-                gchannel.sendMessageEmbeds(embed.build()).queue();
+                gwMsg.editMessageEmbeds(embed.build()).queue();
                 return;
             }
             time = time - 10;
